@@ -31,7 +31,7 @@ const SortWrapper = styled.div`
   place-items: center;
   & > select {
     width: 100%;
-    height: 50%;
+    height: 60%;
     border-radius: 20px;
     margin: auto 0;
     background: #fff;
@@ -49,7 +49,7 @@ const SortMenu = styled.div`
   display: grid;
   color: #4c39c3;
   place-items: center;
-  padding: 3px;
+  padding: 4px;
   transform: rotate(90deg);
   cursor: pointer;
   transition: all 0.4s ease;

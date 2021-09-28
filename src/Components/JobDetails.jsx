@@ -7,7 +7,6 @@ const Container = styled.div`
   height: auto;
   max-height: 100%;
   display: grid;
-  border: 1px solid;
   grid-template-columns: 30% 1fr;
   & > div:first-child {
     width: 45px;
@@ -15,7 +14,6 @@ const Container = styled.div`
     display: grid;
     place-items: center;
     margin: auto auto;
-    border: 1px solid;
     border-radius: 50%;
     font-size: 24px;
     color: #fff;

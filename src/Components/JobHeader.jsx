@@ -6,7 +6,6 @@ const Container = styled.div`
   height: auto;
   max-height: 100%;
   display: grid;
-  border: 1px solid;
   grid-template-columns: 30% 1fr;
   & > div:first-child {
     width: 60%;
@@ -14,7 +13,6 @@ const Container = styled.div`
     display: grid;
     place-items: center;
     margin: auto auto;
-    border: 1px solid;
     border-radius: 10px;
     overflow: hidden;
     & > img {

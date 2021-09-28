@@ -16,7 +16,7 @@ span {
   color: #373948;
 }
 .green {
-  background-color: ;
+  background-color: #23c556;
   color: #fff;
 }
 .orange {
@@ -43,13 +43,25 @@ button.btn {
   transition: all 0.4s ease;
   box-shadow: unset !important;
 }
-button.btn.secondary {
-  background-color: rgba(151, 157, 172, 0.2);
-  color: #292c3f;
-  box-shadow: 0 5px 10px rgba(0, 0, 10, 0.05);
-}
 button.btn.job-search {
   padding: 12px 24px;
+}
+button.btn.secondary {
+  background-color: rgba(151, 157, 172, 0.2);
+  color: #4c39c3;
+  box-shadow: 0 5px 10px rgba(0, 0, 10, 0.05);
+}
+button.btn.danger {
+  color: #e63946;
+  background-color: #fed9dd;
+}
+button.btn.round {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
 }
 button.btn.secondary:hover {
   color: #373948;
