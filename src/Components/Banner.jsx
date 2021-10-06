@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import LargeInput from "./LargeInput";
 import TagContainer from "./TagContainer";
+import Fade from "react-reveal/Fade";
+
 // images
 import ellipse from "../assets/images/ellipse.svg";
 import ellipseLight from "../assets/images/ellipse-light.svg";
@@ -31,6 +33,7 @@ const LeftPanel = styled.div`
 const Header = styled.h1`
   font-size: 42px;
   color: #373948;
+  position: relative;
   & > span {
     color: #5e4bd9;
     font-family: "Kaushan Script", cursive;
@@ -118,7 +121,9 @@ export default class Banner extends Component {
       <Container>
         <LeftPanel>
           <Header>
-            Find your dream jobs through <span>Search 'N' Get</span> easily
+            <Fade up duration={1000}>
+              Find your dream jobs through <span>Search 'N' Get</span> easily
+            </Fade>
           </Header>
           <LargeInput />
           <TagContainer />
@@ -133,7 +138,9 @@ export default class Banner extends Component {
           <img src={vector} alt="vector" />
           <img src={vector} alt="vector" />
           <BannerImg>
-            <img src={banner} alt="man standing smilling" />
+            <Fade duration={2000}>
+              <img src={banner} alt="man standing smilling" />
+            </Fade>
           </BannerImg>
           <UserName>
             <h3>Tomas Anderson</h3>

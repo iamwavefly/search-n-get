@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Banner from "../Components/Banner";
+import Footer from "../Components/Footer";
 import Header from "../Components/Header";
-import JobLIst from "../Components/JobLIst";
+import JobList from "../Components/JobList";
+import JobPanel from "../Components/JobPanel";
 import JobResultDetails from "../Components/JobResultDetails";
 import Partners from "../Components/Partners";
 
@@ -13,7 +15,8 @@ export default class JobLIsting extends Component {
         <Banner />
         <Partners />
         <JobResultDetails />
-        <JobLIst />
+        <JobList />
+        <Footer />
       </div>
     );
   }

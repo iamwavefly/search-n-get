@@ -3,10 +3,10 @@
 body {
   margin: 0;
   padding: 0;
-  height: 2000px;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 h1 {
   /* font-family: "Merriweather", serif; */
@@ -30,6 +30,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.infinite-scroll-component {
+  overflow: unset !important;
+}
 button.btn {
   font-size: 14px;
   color: #fff;
@@ -41,7 +44,7 @@ button.btn {
   cursor: pointer;
   margin: 0 4px;
   transition: all 0.4s ease;
-  box-shadow: unset !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 10, 0.05);
 }
 button.btn.job-search {
   padding: 12px 24px;
@@ -49,7 +52,7 @@ button.btn.job-search {
 button.btn.secondary {
   background-color: rgba(151, 157, 172, 0.2);
   color: #4c39c3;
-  box-shadow: 0 5px 10px rgba(0, 0, 10, 0.05);
+  box-shadow: unset !important;
 }
 button.btn.danger {
   color: #e63946;
@@ -64,8 +67,8 @@ button.btn.round {
   border-radius: 50%;
 }
 button.btn.secondary:hover {
-  color: #373948;
-  background-color: rgba(151, 157, 172, 0.2);
+  color: #fff;
+  background-color: #4c39c3;
   box-shadow: unset;
 }
 button.btn:hover {

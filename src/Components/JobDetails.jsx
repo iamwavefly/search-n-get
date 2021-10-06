@@ -9,8 +9,8 @@ const Container = styled.div`
   display: grid;
   grid-template-columns: 30% 1fr;
   & > div:first-child {
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     display: grid;
     place-items: center;
     margin: auto auto;
@@ -30,12 +30,15 @@ const Container = styled.div`
     & > h2 {
       font-size: 16px;
       font-weight: 600;
-      color: #373948;
+      color: rgba(41, 44, 63, 0.8);
+      white-space: nowrap;
     }
     & > p {
       line-height: 0rem;
       font-size: 15px;
       color: rgba(41, 44, 63, 0.8);
+      margin-top: 10px;
+      white-space: nowrap;
     }
   }
 `;
@@ -46,7 +49,11 @@ export default class JobDetails extends Component {
       <Container>
         <div className={this.props.bgColor}>{this.props.iconName}</div>
         <div className="content">
-          <h2>{this.props.title}</h2>
+          <h2>
+            {this.props.title && this.props.title.length > 20
+              ? this.props.title.substring(0, 20) + "..."
+              : this.props.title}
+          </h2>
           <p>{this.props.subtitle}</p>
         </div>
       </Container>

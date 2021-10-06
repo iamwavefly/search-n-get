@@ -5,11 +5,9 @@ const Container = styled.div`
   position: relative;
   width: 85%;
   height: auto;
-  display: grid;
-  grid-auto-rows: 6rem;
   margin: 2rem auto auto;
 `;
-export default class JobLIst extends Component {
+export default class JobList extends Component {
   render() {
     return (
       <Container>
