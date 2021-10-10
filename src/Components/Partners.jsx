@@ -24,7 +24,11 @@ const Container = styled.div`
       height: 100%;
       filter: grayscale();
       object-fit: contain;
-      opacity: 0.5;
+      opacity: 0.6;
+    }
+    &:hover img {
+      filter: grayscale(0);
+      opacity: 1;
     }
   }
 `;
