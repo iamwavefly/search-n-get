@@ -18,6 +18,7 @@ const Container = styled.div`
   & > div {
     width: 100%;
     height: 100%;
+    cursor: pointer;
     overflow: hidden;
     & > img {
       width: 100%;
@@ -25,6 +26,7 @@ const Container = styled.div`
       filter: grayscale();
       object-fit: contain;
       opacity: 0.6;
+      transition: all 0.4s ease;
     }
     &:hover img {
       filter: grayscale(0);
