@@ -3,6 +3,8 @@ import styled from "styled-components";
 import LargeInput from "./LargeInput";
 import TagContainer from "./TagContainer";
 import Fade from "react-reveal/Fade";
+import UpdateBox from "./UpdateBox";
+import Typewriter from "typewriter-effect";
 
 // images
 import ellipse from "../assets/images/ellipse.svg";
@@ -15,10 +17,13 @@ import vector from "../assets/images/vector.svg";
 import banner from "../assets/images/banner.png";
 
 // styles
-const Container = styled.div`
-  width: 85%;
+const BgWrapper = styled.div`
+  background-color: rgba(75, 57, 195, 0.05);
   height: 90vh;
-  // border-bottom: 1px solid #eee;
+`;
+const Container = styled.div`
+  height: 100%;
+  width: 85%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 40% 1fr;
@@ -31,12 +36,10 @@ const LeftPanel = styled.div`
   flex-direction: column;
 `;
 const Header = styled.h1`
-  font-size: 42px;
-  color: #373948;
-  position: relative;
-  & > span {
-    color: #5e4bd9;
-    font-family: "Kaushan Script", cursive;
+  & span {
+    transition: all 44s ease;
+    font-size: 45px;
+    color: #373948;
   }
 `;
 const RightPanel = styled.div`
@@ -116,38 +119,73 @@ const UserName = styled.div`
 `;
 
 export default class Banner extends Component {
+  // typer() {
+  //   <Typewriter
+  //     options={{
+  //       strings: ["Hello", "World"],
+  //       autoStart: true,
+  //       loop: true,
+  //     }}
+  //   />;
+  // }
   render() {
     return (
-      <Container>
-        <LeftPanel>
-          <Header>
-            <Fade up duration={1000}>
-              Find your dream jobs through <span>Search 'N' Get</span> easily
-            </Fade>
-          </Header>
-          <LargeInput />
-          <TagContainer />
-        </LeftPanel>
-        <RightPanel>
-          <img src={ellipse} alt="ellipse" />
-          <img src={ellipseLight} alt="ellipse Light" />
-          <img src={score} alt="score" />
-          <img src={balls} alt="balls" />
-          <img src={ballsLight} alt="balls Light" />
-          <img src={token} alt="token" />
-          <img src={vector} alt="vector" />
-          <img src={vector} alt="vector" />
-          <BannerImg>
-            <Fade duration={2000}>
-              <img src={banner} alt="man standing smilling" />
-            </Fade>
-          </BannerImg>
-          <UserName>
-            <h3>Tomas Anderson</h3>
-            <p>Business Developer</p>
-          </UserName>
-        </RightPanel>
-      </Container>
+      <BgWrapper>
+        <Container>
+          <LeftPanel>
+            <UpdateBox />
+            <Header>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter
+                    .typeString("Hire Best Candidate Without")
+                    .typeString("<span class='cursive-text'> Fear</span>")
+                    .pauseFor(2000)
+                    .deleteChars(4)
+                    .typeString(
+                      "<span class='cursive-text'> Wasting Money</span>"
+                    )
+                    .pauseFor(2000)
+                    .deleteChars(14)
+                    .typeString(
+                      "<span class='cursive-text'>False Credentials</span>"
+                    )
+                    .pauseFor(1000)
+                    .deleteAll()
+                    .pauseFor(2500)
+                    .typeString(
+                      "Find your dream jobs through <span class='cursive-text'>Search 'N' Get</span> easy"
+                    )
+                    .start();
+                }}
+              />
+              {/* Find your dream jobs through
+              <span>Search 'N' Get</span> easily */}
+            </Header>
+            <LargeInput />
+            <TagContainer />
+          </LeftPanel>
+          <RightPanel>
+            <img src={ellipse} alt="ellipse" />
+            <img src={ellipseLight} alt="ellipse Light" />
+            <img src={score} alt="score" />
+            <img src={balls} alt="balls" />
+            <img src={ballsLight} alt="balls Light" />
+            <img src={token} alt="token" />
+            <img src={vector} alt="vector" />
+            <img src={vector} alt="vector" />
+            <BannerImg>
+              <Fade duration={2000}>
+                <img src={banner} alt="man standing smilling" />
+              </Fade>
+            </BannerImg>
+            <UserName>
+              <h3>Tomas Anderson</h3>
+              <p>Business Developer</p>
+            </UserName>
+          </RightPanel>
+        </Container>
+      </BgWrapper>
     );
   }
 }

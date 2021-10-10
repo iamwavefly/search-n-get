@@ -4,17 +4,22 @@ import AccountMenu from "./AccountMenu";
 import Logo from "./Logo";
 import NavLinks from "./NavLinks";
 
+const BgWrapper = styled.div`
+  background-color: rgba(75, 57, 195, 0.05);
+  height: auto;
+  min-height: 4rem;
+  display: grid;
+  place-items: center;
+`;
 const Container = styled.div`
   position: relative;
+  height: 100%;
   width: 85%;
-  height: auto;
-  min-height: 3.5rem;
   margin: 5px auto auto;
   display: grid;
   grid-template-columns: auto repeat(2, 1fr);
   align-item: center;
   justify-content: center;
-  // border-bottom: 1px solid rgba(0, 0, 0, 0.04);
 `;
 
 const BrandLogo = styled.div`
@@ -32,13 +37,15 @@ const BrandLogo = styled.div`
 export default class Header extends Component {
   render() {
     return (
-      <Container>
-        <BrandLogo>
-          <Logo />
-        </BrandLogo>
-        <NavLinks />
-        <AccountMenu />
-      </Container>
+      <BgWrapper>
+        <Container>
+          <BrandLogo>
+            <Logo />
+          </BrandLogo>
+          <NavLinks />
+          <AccountMenu />
+        </Container>
+      </BgWrapper>
     );
   }
 }

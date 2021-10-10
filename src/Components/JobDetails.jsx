@@ -1,23 +1,27 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
 import styled from "styled-components";
 
 const Container = styled.div`
+  position: relative;
   width: 100%;
   height: auto;
   max-height: 100%;
   display: grid;
   grid-template-columns: 30% 1fr;
+  transition: width 0.4s ease;
+  opacity: 1;
   & > div:first-child {
-    width: 40px;
-    height: 40px;
-    display: grid;
-    place-items: center;
-    margin: auto auto;
-    border-radius: 50%;
-    font-size: 24px;
-    color: #fff;
-    overflow: hidden;
+    // width: 40px;
+    // height: 40px;
+    // display: grid;
+    // place-items: center;
+    // margin: auto auto;
+    // border-radius: 50%;
+    // font-size: 24px;
+    // color: #fff;
+    // overflow: hidden;
   }
   & > div:last-child {
     width: 100%;
@@ -43,11 +47,18 @@ const Container = styled.div`
   }
 `;
 
-export default class JobDetails extends Component {
+class JobDetails extends Component {
+  componentDidMount() {
+    console.log(this.props.jobsProps);
+  }
   render() {
     return (
-      <Container>
-        <div className={this.props.bgColor}>{this.props.iconName}</div>
+      <Container
+        className={
+          this.props.jobsProps.jobDetails.jobDetailsOpen && "hide-details"
+        }
+      >
+        {/* <div className={this.props.bgColor}>{this.props.iconName}</div> */}
         <div className="content">
           <h2>
             {this.props.title && this.props.title.length > 20
@@ -60,3 +71,10 @@ export default class JobDetails extends Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    jobsProps: state,
+  };
+};
+
+export default connect(mapStateToProps)(JobDetails);

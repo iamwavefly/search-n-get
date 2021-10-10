@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import { ThemeProvider } from "styled-components";
 import JobLIsting from "./Pages/JobLIsting";
-import { fetchPostsWithRedux } from "./Reducers";
+import { fetchPostsWithRedux } from "./Reducers/jobReducer";
 
 const theme = {
   colors: {
@@ -12,7 +12,7 @@ const theme = {
 };
 class App extends Component {
   componentDidMount() {
-    this.props.fetchJobs(this.props.posts.searchTerm, 100);
+    this.props.fetchJobs();
   }
   render() {
     return (
