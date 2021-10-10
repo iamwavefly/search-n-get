@@ -16,7 +16,8 @@ const Container = styled.div`
       padding: 2px 10px;
       border-radius: 20px;
       color: #fff;
-      background-color: rgb(75, 57, 195);
+      background-image: linear-gradient(to bottom, #4c39c3, #5523a5);
+
       position: relative;
       left: -5px;
     }
