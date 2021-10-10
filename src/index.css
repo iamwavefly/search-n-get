@@ -26,7 +26,7 @@ span.cursive-text{
   border: 1px solid;
   color: #5e4bd9 !important;
   font-size: 45px;
-  font-family: "Kaushan Script", cursive !important;
+  font-family: "Kaushan Script", cursive !important; 
 }
 .green {
   background-color: #23c556;
@@ -61,7 +61,7 @@ button.btn {
   padding: 10px 24px;
   border: none;
   border-radius: 20px;
-  background: #4c39c3;
+  background-image: linear-gradient(to bottom, #4c39c3, #5523a5);
   cursor: pointer;
   margin: 0 4px;
   transition: all 0.4s ease;
@@ -71,6 +71,7 @@ button.btn.job-search {
   padding: 12px 24px;
 }
 button.btn.secondary {
+  background-image: none;
   background-color: rgba(151, 157, 172, 0.2);
   color: #4c39c3;
   box-shadow: unset !important;
@@ -78,6 +79,7 @@ button.btn.secondary {
 button.btn.danger {
   color: #e63946;
   background-color: #fed9dd;
+  background-image: none;
 }
 button.btn.grey {
   background: #373948;
@@ -94,7 +96,8 @@ button.btn.round {
 }
 button.btn.secondary:hover {
   color: #fff;
-  background-color: #4c39c3;
+  background-image: linear-gradient(to bottom, #4c39c3, #5523a5);
+
   box-shadow: unset;
 }
 button.btn.round.small {
@@ -115,7 +118,8 @@ button.btn:hover {
   transition: all 0.4s ease;
 }
 .tag-cta:hover {
-  background: #4c39c3 !important;
+  background-image: linear-gradient(to bottom, #4c39c3, #5523a5);
+
   color: #fff !important;
 }
 .tag-cta:hover span {

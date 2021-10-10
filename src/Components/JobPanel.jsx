@@ -22,10 +22,12 @@ const Container = styled.div`
   box-shadow: 0 0px 20px rgba(0, 0, 10, 0.03);
   border-bottom: 1px solid #f1f1f1;
   background-color: #fff;
+  border: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.55, -0.04, 0.91, 0.94);
+  transition: all 0.2s ease;
   &:hover {
     box-shadow: 0 5px 10px rgba(0, 0, 10, 0.1);
+    border: 2px solid #5e4bd9;
   }
 `;
 
