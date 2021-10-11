@@ -18,15 +18,15 @@ span,
 li {
   color: #727279;
 }
-h2 {
-  color: #373948;
+h2,h3 {
+  color: #1f212b;
 }
 span.cursive-text{
   display: inline;
   color: #5e4bd9 !important;
   font-size: 45px;
   font-family: "Kaushan Script", cursive !important; 
-
+  width: fit-content;
   background: -webkit-linear-gradient(#4c39c3, #5523a5);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -247,6 +247,12 @@ button.btn:hover {
 .animate-content * {
   animation: 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0s 1 animate-content;
   opacity: 1;
+}
+.job-banner{
+  background-image: linear-gradient(to right, rgba(75, 57, 195, 0.8), rgba(75, 57, 195, 0.8)), url("../src/assets/images/job-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 @keyframes animate-content {
   from {

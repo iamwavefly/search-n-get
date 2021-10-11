@@ -1,22 +1,21 @@
 import React, { Component } from "react";
 import Banner from "../Components/Banner";
-import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+import CTA from "../Components/CTA";
 import JobList from "../Components/JobList";
-import JobPanel from "../Components/JobPanel";
 import JobResultDetails from "../Components/JobResultDetails";
 import Partners from "../Components/Partners";
+import RecommendedJobs from "../Components/RecommendedJobs";
 
-export default class JobLIsting extends Component {
+export default class JobListing extends Component {
   render() {
     return (
       <div>
-        <Header />
         <Banner />
         <Partners />
+        <CTA />
+        <RecommendedJobs />
         <JobResultDetails />
         <JobList />
-        <Footer />
       </div>
     );
   }

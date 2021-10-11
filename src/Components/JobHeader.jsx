@@ -68,7 +68,7 @@ const Details = styled.div`
 export default class JobHeader extends Component {
   render() {
     return (
-      <Container>
+      <Container className="job-header-wrapper">
         <div className="job-company-logo">
           <img
             src={this.props.imgUrl}

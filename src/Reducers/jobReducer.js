@@ -10,13 +10,13 @@ import {
   getPostsError,
 } from "../Actions";
 
-const baseUrl = "http://localhost:5000";
+const baseUrl = "https://search-n-get-api.herokuapp.com";
 
 const initState = {
   pending: true,
   posts: [],
   page_number: 1,
-  searchTerm: "react",
+  searchTerm: "python",
   error: null,
 };
 

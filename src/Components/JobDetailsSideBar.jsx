@@ -5,6 +5,7 @@ import imgError from "../assets/images/brand/placeholder.png";
 import { connect } from "react-redux";
 import styled from "styled-components";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 90vh;
@@ -150,11 +151,13 @@ class JobDetailsSideBar extends Component {
           }}
         ></JobSummary>
         <BtnContainer>
+          <Link to={`/job/${this.props.jobDetails.job?.slug}`}>
           <Button
             handleSubmit={this.handleSubmit}
             text="Apply Now"
             id={this.props.jobId}
           />
+          </Link>
           <Button text={<FaFlag />} btnType="grey round" />
         </BtnContainer>
       </Container>

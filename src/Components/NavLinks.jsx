@@ -14,7 +14,7 @@ const Container = styled.nav`
     display: grid;
     place-items: center;
     list-style-type: none;
-    padding: 0 20px;
+    padding: 0 15px;
     color: rgba(41, 44, 63, 0.8);
     transition: all 0.4s ease;
     border-bottom: 1px solid transparent;
@@ -40,13 +40,16 @@ export default class lis extends Component {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/">Pricing</a>
+          <a href="/">About Us</a>
+        </li>
+        <li>
+          <a href="/">Jobs</a>
         </li>
         <li>
           <a href="/">Blog</a>
         </li>
         <li>
-          <a href="/">Become a member</a>
+          <a href="/">Contact Us</a>
         </li>
       </Container>
     );

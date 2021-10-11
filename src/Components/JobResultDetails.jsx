@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 85%;
   height: auto;
   min-height: 4rem;
-  margin: 10px auto auto;
+  margin: 4rem auto auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
 `;

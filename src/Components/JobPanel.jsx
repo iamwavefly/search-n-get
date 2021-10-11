@@ -122,7 +122,7 @@ class JobPanel extends Component {
                   bgColor="orange"
                   iconName={<AiFillClockCircle />}
                 />
-                <JobCta jobId={job.id} />
+                <JobCta jobId={job.id} jobUrl={job.slug}/>
               </Container>
             );
           })}
