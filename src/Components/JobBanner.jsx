@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Button from './Button';
 import { FaFlag, FaTimes } from 'react-icons/fa';
+import format from 'moment';
+import JobDetails from './JobDetails';
+import { HiLocationMarker } from 'react-icons/hi';
+import { AiFillClockCircle } from 'react-icons/ai';
 
 import imgError from '../assets/images/brand/placeholder.png';
 
@@ -79,7 +83,27 @@ const BtnContainer = styled.div`
 
 const LeftPanel = styled.div``;
 const RightPanel = styled.div``;
-
+const JobContent = styled.div`
+	width: 90%;
+	margin: 2rem auto auto;
+	& > h2 {
+		font-size: 18px;
+	}
+	& span {
+		position: relative !important;
+		top: -10px;
+	}
+	& > p {
+		font-size: 16px;
+		line-height: 1.8rem;
+		color: #e63946;
+		margin-top: -10px;
+	}
+`;
+const JobForm = styled.div`
+	width: 90%;
+	margin: 0 auto;
+`
 class JobBanner extends Component {
 	render() {
 		return (
@@ -111,7 +135,40 @@ class JobBanner extends Component {
 							</Link>
 						</BtnContainer>
 					</LeftPanel>
-					<RightPanel />
+					<RightPanel>
+						<JobContent>
+							<h1>{this.props.jobDetails.job?.role}</h1>
+							<span>
+								{format(this.props.jobDetails.job?.date_posted).fromNow()}
+							</span>
+							<div className="row">
+								<JobDetails
+									title='Location'
+									subtitle={this.props.jobDetails.job?.location}
+									bgColor='green'
+									iconName={<HiLocationMarker />}
+								/>
+								<JobDetails
+									title='Employment Type'
+									subtitle={
+										this.props.jobDetails.job.employment_type?.charAt(0).toUpperCase() +
+										this.props.jobDetails.job.employment_type?.substr(1).toLowerCase()
+									}
+									bgColor='orange'
+									iconName={<AiFillClockCircle />}
+								/>
+							</div>
+							<h3>Job Description</h3>
+							<p
+								dangerouslySetInnerHTML={{
+									__html: this.props.jobDetails.job?.sanitizedHtml,
+								}}></p>
+						</JobContent>
+						<JobForm>
+							<h2>Application Form</h2>
+							<Button text="Submit"/>
+						</JobForm>
+					</RightPanel>
 				</Container>
 			</div>
 		);
