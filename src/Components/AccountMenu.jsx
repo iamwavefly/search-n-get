@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Button from "./Button";
 import SearchInput from "./SearchInput";
@@ -28,7 +29,9 @@ export default class AccountMenu extends Component {
         <SearchInput />
         <ButtonWrapper>
           <Button btnType="secondary" text="Log In" />
-          <Button text="Sign Up" />
+          <Link to="/user/signup">
+            <Button text="Sign Up" />
+          </Link>
         </ButtonWrapper>
       </Container>
     );

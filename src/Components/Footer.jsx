@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   width: 100%;
   height: 5rem;
-  background: #eee;
+  background: rgb(248, 247, 255);
   margin-top: 6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;

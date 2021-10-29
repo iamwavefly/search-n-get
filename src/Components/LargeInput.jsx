@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import styled from "styled-components";
-import { fetchPostsWithRedux } from "../Reducers";
+import { fetchPostsWithRedux } from "../Reducers/jobReducer";
+
 import Button from "./Button";
 
 const Container = styled.div`
@@ -42,8 +43,7 @@ class LargeInput extends Component {
   }
   handleSubmit() {
     this.props.updateSearchTerm(this.state.searchTerm);
-    this.props.fetchJobs(this.props.posts.searchTerm, 100);
-    // this.setState({ searchTerm: "" });
+    this.props.fetchJobs();
   }
   render() {
     return (
@@ -51,7 +51,6 @@ class LargeInput extends Component {
         <Input
           value={this.state.searchTerm}
           onChange={this.handleChange}
-          autoFocus
           placeholder="Search here..."
         />
         <BtnWrapper>

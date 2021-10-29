@@ -9,7 +9,7 @@ const Container = styled.div`
   width: 85%;
   height: auto;
   min-height: 4rem;
-  margin: 10px auto auto;
+  margin: 4rem auto auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
 `;
@@ -20,7 +20,7 @@ class JobResultDetails extends Component {
       <Container>
         <SectionHeader
           text={`Showing ${
-            this.props.posts.results ? this.props.posts.results.length : 0
+            this.props.posts ? this.props.posts.length : 0
           } Jobs`}
         />
         <FilterBox />
@@ -31,7 +31,7 @@ class JobResultDetails extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    posts: state.posts,
+    posts: state.jobReducer.posts,
   };
 };
 

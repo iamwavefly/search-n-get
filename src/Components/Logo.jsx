@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import LogoImg from "../assets/images/logo.svg";
+import {Link} from "react-router-dom"
+
 
 const BrandLogo = styled.div`
   width: 10rem;
@@ -21,7 +23,9 @@ export default class Logo extends Component {
   render() {
     return (
       <BrandLogo>
-        <Img src={LogoImg} />
+        <Link to="/">
+          <Img src={LogoImg} />
+        </Link>
       </BrandLogo>
     );
   }

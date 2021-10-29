@@ -7,7 +7,10 @@ export default class Button extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit() {
-    this.props.handleSubmit();
+    if (this.props.handleSubmit) {
+      this.props.handleSubmit();
+    }
+    return null;
   }
   render() {
     return (

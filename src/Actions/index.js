@@ -5,7 +5,22 @@ export const UPDATE_SEARCH_TERM = "UPDATE_SEARCH_TERM";
 export const UPDATE_JOBS_QUERY = "UPDATE_JOBS_QUERY";
 export const UPDATE_JOBS_FULLTIME = "UPDATE_JOBS_FULLTIME";
 export const GET_POSTS_ERROR = "GET_POSTS_ERROR";
+export const JOB_DETAILS_OPEN = "JOB_DETAILS_OPEN";
+export const UPDATE_JOB_ID = "UPDATE_JOB_ID";
+export const UPDATE_JOB = "UPDATE_JOB";
 
+export const updateJobId = (jobId) => {
+  return {
+    type: UPDATE_JOB_ID,
+    payload: jobId,
+  };
+};
+export const updateJob = (job) => {
+  return {
+    type: UPDATE_JOB,
+    payload: job,
+  };
+};
 export const getPostsPending = () => {
   return {
     type: GET_POSTS_PENDING,
@@ -39,6 +54,12 @@ export const updateJobsFullTime = (posts) => {
   return {
     type: UPDATE_JOBS_FULLTIME,
     payload: posts,
+  };
+};
+export const jobDetailsOpen = (isOpen) => {
+  return {
+    type: JOB_DETAILS_OPEN,
+    payload: isOpen,
   };
 };
 export const getPostsError = (error) => {

@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Open+Sans:wght@400;500;600;700;800&family=Kaushan+Script&family=Playfair+Display:wght@500;600;700&display=swap");
 
 body {
+  position: relative;
   margin: 0;
   padding: 0;
+  overflow: auto;
   font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,16 +14,38 @@ h1 {
   /* font-family: "Merriweather", serif; */
 }
 p,
-span {
-  color: #373948;
+span,
+li {
+  color: #727279;
+}
+h2,h3 {
+  color: #1f212b;
+}
+span.cursive-text{
+  display: inline;
+  color: #5e4bd9 !important;
+  font-size: 45px;
+  font-family: "Kaushan Script", cursive !important; 
+  width: fit-content;
+  background: -webkit-linear-gradient(#4c39c3, #5523a5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .green {
-  background-color: #23c556;
-  color: #fff;
+  background-color: rgba(35, 197, 86, 0.1);
+  color: #23c556 !important;
 }
 .orange {
-  background-color: #fca050;
-  color: #fff;
+  background-color: rgba(252, 143, 80, 0.1);
+  color: #fc8f50 !important;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 10, 0.02);
+  border-radius: 20px;
 }
 ::placeholder {
   color: #888;
@@ -40,7 +64,7 @@ button.btn {
   padding: 10px 24px;
   border: none;
   border-radius: 20px;
-  background: #4c39c3;
+  background-image: linear-gradient(to bottom, #4c39c3, #5523a5);
   cursor: pointer;
   margin: 0 4px;
   transition: all 0.4s ease;
@@ -50,6 +74,7 @@ button.btn.job-search {
   padding: 12px 24px;
 }
 button.btn.secondary {
+  background-image: none;
   background-color: rgba(151, 157, 172, 0.2);
   color: #4c39c3;
   box-shadow: unset !important;
@@ -57,6 +82,12 @@ button.btn.secondary {
 button.btn.danger {
   color: #e63946;
   background-color: #fed9dd;
+  background-image: none;
+}
+button.btn.grey {
+  background: #373948;
+  color: #fff;
+  box-shadow: unset;
 }
 button.btn.round {
   display: grid;
@@ -68,8 +99,16 @@ button.btn.round {
 }
 button.btn.secondary:hover {
   color: #fff;
-  background-color: #4c39c3;
+  background-image: linear-gradient(to bottom, #4c39c3, #5523a5);
+
   box-shadow: unset;
+}
+button.btn.round.small {
+  width: 30px;
+  height: 30px;
+}
+button.btn.round.small > svg {
+  margin: -5px -5px;
 }
 button.btn:hover {
   background: #373948;
@@ -82,7 +121,8 @@ button.btn:hover {
   transition: all 0.4s ease;
 }
 .tag-cta:hover {
-  background: #4c39c3 !important;
+  background-image: linear-gradient(to bottom, #4c39c3, #5523a5);
+
   color: #fff !important;
 }
 .tag-cta:hover span {
@@ -182,12 +222,10 @@ button.btn:hover {
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-
 .filter-switch input[type="checkbox"]:checked:before {
   left: calc(100% - 15px);
   border: 2px solid #4c39c3;
 }
-
 .filter-switch input[type="checkbox"]:checked:after {
   width: 14px;
   height: 14px;
@@ -199,4 +237,28 @@ button.btn:hover {
   transform: scale(1) translateY(-50%);
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;
+}
+
+.hide-details {
+  width: 0 !important;
+  opacity: 0 !important;
+  padding: 0 !important;
+}
+.animate-content * {
+  animation: 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0s 1 animate-content;
+  opacity: 1;
+}
+.job-banner{
+  background-image: linear-gradient(to right, rgba(75, 57, 195, 0.8), rgba(75, 57, 195, 0.8)), url("../src/assets/images/job-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@keyframes animate-content {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

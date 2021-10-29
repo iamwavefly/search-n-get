@@ -4,8 +4,7 @@ import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 
 import styled from "styled-components";
-import { updateJobsFreelance } from "../Actions";
-import { fetchPostsWithRedux } from "../Reducers";
+import { fetchPostsWithRedux } from "../Reducers/jobReducer";
 
 const Container = styled.div`
   width: 100%;
