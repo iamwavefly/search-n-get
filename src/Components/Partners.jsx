@@ -12,7 +12,7 @@ const Container = styled.div`
   width: 70%;
   margin: 2rem auto auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-gap: 40px;
   padding: 0 40px;
   & > div {

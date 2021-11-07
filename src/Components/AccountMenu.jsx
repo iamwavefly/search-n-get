@@ -28,7 +28,9 @@ export default class AccountMenu extends Component {
       <Container>
         <SearchInput />
         <ButtonWrapper>
-          <Button btnType="secondary" text="Log In" />
+          <Link to="/user/login">
+            <Button btnType="secondary" text="Log In" />
+          </Link>
           <Link to="/user/signup">
             <Button text="Sign Up" />
           </Link>

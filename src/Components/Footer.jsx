@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 100%;
   height: 5rem;
   background: rgb(248, 247, 255);
-  margin-top: 6rem;
+  margin-top: 4rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-item: center;
@@ -18,7 +18,7 @@ const Container = styled.div`
     font-size: 14px;
     margin-left: 3rem;
     & > a {
-      color: ${({ theme }) => theme.colors.primary};
+      color: #5e4bd9;
       margin-left: 5px;
       text-decoration: none;
     }
@@ -32,7 +32,7 @@ const Container = styled.div`
       list-style-type: none;
       & > a {
         text-decoration: none;
-        color: ${({ theme }) => theme.colors.primary};
+        color: #5e4bd9;
         margin: 0 5px;
         font-size: 14px;
       }

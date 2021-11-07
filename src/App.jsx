@@ -2,7 +2,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
-import { ThemeProvider } from "styled-components";
 import JobListing from "./Pages/JobListing";
 import { fetchPostsWithRedux } from "./Reducers/jobReducer";
 import { StylesProvider } from "@material-ui/styles";
@@ -11,12 +10,8 @@ import Job from "./Pages/Job";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Signup from "./Pages/Signup";
+import Login from "./Pages/Login";
 
-const theme = {
-  colors: {
-    primary: "#5e4bd9",
-  },
-};
 class App extends Component {
   componentDidMount() {
     this.props.fetchJobs();
@@ -24,22 +19,24 @@ class App extends Component {
   render() {
     return (
       <StylesProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          <Router>
-            <Header />
-            <Switch>
-              <Route exact path="/">
-                <JobListing />
-              </Route>
-              <Route path="/job/:slug" render={(props) => <Job {...props} />} />
-              <Route
-                path="/user/signup"
-                render={(props) => <Signup {...props} />}
-              />
-            </Switch>
-            <Footer />
-          </Router>
-        </ThemeProvider>
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <JobListing />
+            </Route>
+            <Route path="/job/:slug" render={(props) => <Job {...props} />} />
+            <Route
+              path="/user/signup"
+              render={(props) => <Signup {...props} />}
+            />
+            <Route
+              path="/user/login"
+              render={(props) => <Login {...props} />}
+            />
+          </Switch>
+          <Footer />
+        </Router>
       </StylesProvider>
     );
   }
